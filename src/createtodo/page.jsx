@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://todo-backend-1-eqy9.onrender.com";
+
 export default function Home() {
   const [title, setTitle] = useState("");
   const [todos, setTodos] = useState([]);
@@ -14,7 +16,7 @@ export default function Home() {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/todos", {
+      const response = await fetch(`${BASE_URL}/todos`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -43,7 +45,7 @@ export default function Home() {
   // View All Todos
   const viewTodo = async () => {
     try {
-      const response = await fetch("http://localhost:5000/todos/todos");
+      const response = await fetch(`${BASE_URL}/todos/todos`);
 
       const data = await response.json();
 

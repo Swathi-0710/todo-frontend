@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://todo-backend-1-eqy9.onrender.com";
+
 export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(false);
 
@@ -17,7 +19,7 @@ export default function AuthPage() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/todos/register",
+        `${BASE_URL}/auth/register`,
         {
           method: "POST",
           headers: {
@@ -58,7 +60,7 @@ const loginUser = async () => {
 
   try {
     const response = await fetch(
-      "http://localhost:5000/todos/login",
+      `${BASE_URL}/auth/login`,
       {
         method: "POST",
         headers: {
