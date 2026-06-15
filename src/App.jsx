@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://todo-backend-1-eqy9.onrender.com";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://todo-backend-2-0pf2.onrender.com";
 
 export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(false);
