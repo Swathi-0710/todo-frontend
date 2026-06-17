@@ -81,7 +81,7 @@ export default function AuthShell({ children, mode }) {
               letterSpacing: "-0.5px",
             }}
           >
-            Lavender Todo
+             Todo
           </Typography>
 
           <Typography
