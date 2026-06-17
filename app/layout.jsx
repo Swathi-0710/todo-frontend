@@ -2,7 +2,7 @@ import "./globals.css";
 import Providers from "./providers";
 
 export const metadata = {
-  title: "Lavender Todo",
+  title: "Todo",
   description: "A complete todo web application with login and sign up pages.",
 };
 
